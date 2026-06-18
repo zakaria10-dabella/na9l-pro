@@ -7,5 +7,6 @@ fi
 
 php artisan config:clear --no-interaction
 php artisan migrate --force --no-interaction
+php artisan db:seed --force --no-interaction
 
 php artisan serve --host=0.0.0.0 --port="${PORT:-8000}"

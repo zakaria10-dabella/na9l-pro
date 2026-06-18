@@ -23,6 +23,7 @@ class AdminController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required', 'string'],
         ]);
+        $data['email'] = strtolower(trim($data['email']));
 
         $admin = $this->adminAccount();
 
@@ -67,6 +68,7 @@ class AdminController extends Controller
             'name' => ['required', 'string', 'max:120'],
             'email' => ['required', 'email', 'max:120'],
         ]);
+        $data['email'] = strtolower(trim($data['email']));
 
         $admin = [
             ...$this->adminAccount(),
@@ -114,6 +116,7 @@ class AdminController extends Controller
             'email' => ['required', 'email', 'max:120', Rule::unique('clients', 'email')->ignore($client->id)],
             'password' => ['nullable', 'string', 'min:6', 'max:120'],
         ]);
+        $data['email'] = strtolower(trim($data['email']));
 
         if (!empty($data['password'])) {
             $data['password_plain'] = $data['password'];
@@ -150,6 +153,7 @@ class AdminController extends Controller
             'vehicle_category' => ['required', Rule::in(['A', 'B', 'C'])],
             'password' => ['nullable', 'string', 'min:6', 'max:120'],
         ]);
+        $data['email'] = strtolower(trim($data['email']));
 
         if (!empty($data['password'])) {
             $data['password_plain'] = $data['password'];

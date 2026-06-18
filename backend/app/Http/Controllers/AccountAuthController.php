@@ -16,6 +16,7 @@ class AccountAuthController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required', 'string'],
         ]);
+        $data['email'] = strtolower(trim($data['email']));
 
         $client = Client::where('email', $data['email'])->first();
 

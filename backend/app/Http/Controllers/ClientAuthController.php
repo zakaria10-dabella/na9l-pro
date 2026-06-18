@@ -16,6 +16,7 @@ class ClientAuthController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required', 'string'],
         ]);
+        $data['email'] = strtolower(trim($data['email']));
 
         $client = Client::where('email', $data['email'])
             ->first();
@@ -40,6 +41,7 @@ class ClientAuthController extends Controller
             'phone' => ['required', 'string', 'max:30'],
             'email' => ['required', 'email', 'max:120', Rule::unique('clients', 'email')->ignore($client->id)],
         ]);
+        $data['email'] = strtolower(trim($data['email']));
 
         $client->update($data);
 

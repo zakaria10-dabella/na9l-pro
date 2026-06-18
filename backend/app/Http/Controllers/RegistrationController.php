@@ -23,6 +23,7 @@ class RegistrationController extends Controller
             'vehicle_number' => ['required_if:role,driver', 'nullable', 'string', 'max:60'],
             'vehicle_category' => ['required_if:role,driver', 'nullable', Rule::in(['A', 'B', 'C'])],
         ]);
+        $data['email'] = strtolower(trim($data['email']));
 
         if ($data['role'] === 'client') {
             $request->validate([
