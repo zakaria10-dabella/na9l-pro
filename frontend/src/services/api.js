@@ -1,5 +1,5 @@
 const defaultApiUrl = import.meta.env.PROD
-  ? 'https://na9l-pro-api.onrender.com/api'
+  ? '/api'
   : 'http://127.0.0.1:8000/api'
 
 export const API_BASE_URL = import.meta.env.VITE_API_URL || defaultApiUrl
