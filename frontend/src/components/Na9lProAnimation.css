@@ -1,0 +1,174 @@
+.na9l-animation {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: clamp(24px, 5vw, 72px);
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(239, 31, 31, 0.15), transparent 34%),
+    linear-gradient(135deg, #090d14 0%, #121822 48%, #070a10 100%);
+  isolation: isolate;
+}
+
+.na9l-animation.light {
+  color: #111827;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(239, 31, 31, 0.13), transparent 34%),
+    linear-gradient(135deg, #eef2f6 0%, #ffffff 48%, #dce3ea 100%);
+}
+
+.na9l-animation::before {
+  content: '';
+  position: absolute;
+  inset: -2%;
+  z-index: -2;
+  opacity: 0.58;
+  background-image: url("data:image/svg+xml,%3Csvg width='1400' height='900' viewBox='0 0 1400 900' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1400' height='900' fill='%230b1018'/%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cpath d='M70 610 C230 520 330 610 482 515 S740 390 910 465 S1160 520 1320 405' stroke='%23323b49' stroke-width='14' opacity='.72'/%3E%3Cpath d='M190 135 C300 248 390 286 520 255 S730 154 865 230 S1048 430 1260 352' stroke='%2329303c' stroke-width='10' opacity='.72'/%3E%3Cpath d='M295 805 C370 652 512 598 648 566 S865 496 1000 260' stroke='%23323b49' stroke-width='11' opacity='.62'/%3E%3Cpath d='M520 65 C560 198 610 325 700 438 S865 604 910 820' stroke='%2329303c' stroke-width='9' opacity='.68'/%3E%3Cpath d='M70 430 C210 382 340 408 470 362 S670 258 780 315 S920 486 1088 448 S1230 315 1370 250' stroke='%23394452' stroke-width='7' opacity='.64'/%3E%3Cpath d='M145 735 C310 705 360 520 515 500 S690 590 855 545 S1100 660 1310 580' stroke='%23252b35' stroke-width='8' opacity='.68'/%3E%3Cpath d='M880 75 C842 210 780 308 812 430 S930 662 850 860' stroke='%23323b49' stroke-width='8' opacity='.55'/%3E%3Cpath d='M30 285 C180 310 305 270 418 190 S610 48 730 90' stroke='%23252b35' stroke-width='7' opacity='.58'/%3E%3C/g%3E%3Cg fill='%23f2f5f8' font-family='Arial, sans-serif' font-size='28' font-weight='700' opacity='.62'%3E%3Ctext x='552' y='455'%3ECasablanca%3C/text%3E%3Ctext x='760' y='340' font-size='19' opacity='.62'%3EMaarif%3C/text%3E%3Ctext x='350' y='585' font-size='19' opacity='.56'%3EAin Diab%3C/text%3E%3Ctext x='930' y='555' font-size='19' opacity='.56'%3ESidi Maarouf%3C/text%3E%3Ctext x='655' y='230' font-size='18' opacity='.48'%3EAnfa%3C/text%3E%3C/g%3E%3Cg fill='%23ef1f1f' opacity='.86'%3E%3Ccircle cx='642' cy='430' r='8'/%3E%3Ccircle cx='840' cy='330' r='5'/%3E%3Ccircle cx='468' cy='545' r='5'/%3E%3Ccircle cx='970' cy='532' r='5'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-position: center;
+  transform: none;
+  filter: saturate(0.92) contrast(1.05);
+}
+
+.na9l-animation.light::before {
+  opacity: 0.48;
+  filter: saturate(0.55) contrast(0.72) invert(1) brightness(1.18);
+}
+
+.na9l-animation::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(5, 8, 13, 0.86), rgba(5, 8, 13, 0.5), rgba(5, 8, 13, 0.86)),
+    radial-gradient(circle at 50% 52%, transparent 0%, rgba(5, 8, 13, 0.55) 62%, rgba(5, 8, 13, 0.95) 100%);
+}
+
+.na9l-animation.light::after {
+  background:
+    linear-gradient(90deg, rgba(248, 250, 252, 0.76), rgba(248, 250, 252, 0.38), rgba(248, 250, 252, 0.76)),
+    radial-gradient(circle at 50% 52%, transparent 0%, rgba(248, 250, 252, 0.42) 62%, rgba(248, 250, 252, 0.88) 100%);
+}
+
+.na9l-animation__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 48% 44%, rgba(239, 31, 31, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 42%);
+}
+
+.na9l-animation.light .na9l-animation__backdrop {
+  background:
+    radial-gradient(circle at 48% 44%, rgba(239, 31, 31, 0.16), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.36), transparent 42%);
+}
+
+.na9l-animation__stage {
+  width: min(880px, 100%);
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: clamp(4px, 1.5vw, 16px);
+  background: transparent;
+}
+
+.na9l-animation.light .na9l-animation__stage {
+  background: transparent;
+  box-shadow: none;
+}
+
+.na9l-animation__map {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.na9l-animation__logo-route {
+  opacity: 0.72;
+  mix-blend-mode: normal;
+  filter:
+    drop-shadow(0 0 26px rgba(239, 31, 31, 0.18))
+    drop-shadow(0 24px 42px rgba(0, 0, 0, 0.32));
+}
+
+.na9l-animation.light .na9l-animation__logo-route {
+  opacity: 0.78;
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 22px 36px rgba(15, 23, 42, 0.18));
+}
+
+.na9l-animation__route-shadow,
+.na9l-animation__route {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.na9l-animation__route-shadow {
+  stroke: transparent;
+  stroke-width: 8;
+}
+
+.na9l-animation.light .na9l-animation__route-shadow {
+  stroke: transparent;
+}
+
+.na9l-animation__route {
+  stroke: transparent;
+  stroke-width: 5;
+}
+
+.na9l-animation__pin {
+  fill: transparent;
+  stroke: transparent;
+}
+
+.na9l-animation.light .na9l-animation__pin {
+  fill: #ffffff;
+}
+
+.na9l-animation__pin--start {
+  stroke-width: 9;
+}
+
+.na9l-animation__pin--end {
+  stroke-width: 11;
+}
+
+.na9l-animation__pulse {
+  fill: rgba(239, 31, 31, 0.22);
+  stroke: rgba(239, 31, 31, 0.72);
+  stroke-width: 2;
+}
+
+.na9l-animation__truck {
+  fill: #111827;
+  stroke: #ffffff;
+  stroke-width: 2;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.38));
+}
+
+.na9l-animation__truck-window {
+  fill: #ef1f1f;
+  stroke: none;
+}
+
+@media (max-width: 720px) {
+  .na9l-animation {
+    min-height: 86vh;
+    padding: 18px;
+  }
+
+  .na9l-animation__stage {
+    padding: 10px;
+  }
+
+}

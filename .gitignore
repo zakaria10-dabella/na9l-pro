@@ -1,0 +1,32 @@
+# Dependencies
+backend/vendor/
+backend/node_modules/
+frontend/node_modules/
+_video_tools/node_modules/
+
+# Build output
+backend/public/build/
+backend/public/hot
+frontend/dist/
+
+# Local environment
+backend/.env
+frontend/.env
+*.local
+
+# Logs and caches
+*.log
+backend/.phpunit.result.cache
+backend/.phpunit.cache/
+frontend/vite.log
+frontend/vite.err.log
+
+# Local tooling and generated media
+_video_tools/
+_video_frames/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
