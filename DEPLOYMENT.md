@@ -16,7 +16,9 @@ The Docker startup script runs Laravel migrations automatically.
 
 ## Frontend on Vercel
 
-In Vercel project settings, add this only if the Render backend URL changes:
+In Vercel project settings, `VITE_API_URL` is optional. If it exists, do not set
+it to `127.0.0.1` or `localhost` for production. Keep it empty, set it to `/api`,
+or add this only if the Render backend URL changes:
 
 ```env
 VITE_API_URL=https://na9l-pro-api.onrender.com/api
